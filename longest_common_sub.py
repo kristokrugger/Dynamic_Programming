@@ -37,17 +37,17 @@ class LCS:
 		print(M)
 		# length of LCS is at the bottom right corner of the table
 		lcs_length = M[n][m]
-	   	i = n 
-	   	j = m 
-	   	lcs = ""
+		i = n 
+		j = m 
+		lcs = ""
 
-	   	# start looping from the bottom right corner of the table M
-	   	while i > 0 and j > 0: 
-	   		# add character to lcs if X[i-1] = Y[j-1]
+		# start looping from the bottom right corner of the table M
+		while i > 0 and j > 0:
+	   		# add character to lcs if X[i-1] = Y[j-1] 
 	   		if X[i-1] == Y[j-1]: 
 	   			lcs = X[i-1] + lcs
 	   			# move diagonally up in the table
-	   			i -= 1 
+	   			i -= 1
 	   			j -= 1
 
 	   		# if length of the lcs increased at the previous row then go up
